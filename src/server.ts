@@ -51,7 +51,8 @@ if (config.get('prometheus_enabled')) {
 }
 
 server.route({
-  method: 'GET', path: '/api/v0/status',
+  method: 'GET',
+  path: '/api/v0/status',
   handler: handlers.Status.index,
   options: {
     description: 'Simply check to see that the server is online and responding',
@@ -65,6 +66,79 @@ server.route({
     }
   }
 })
+
+server.route({
+  method: 'GET',
+  path: '/api/v1/haste/leaderboards',
+  handler: handlers.Leaderboards.index,
+  options: {
+    description: 'List Haste Leaderboards for a game',
+    tags: ['api', 'leaderboards'],
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        leaderboards: Joi.array().items(Joi.object({
+          id: Joi.string().required(),
+          name: Joi.string().required(),
+          cost: Joi.number().required(),
+          currency: Joi.string().required(),
+          formattedName: Joi.string().required(),
+          formattedCostString: Joi.string().required()
+        })).required()
+      }).label('Leaderboards')
+    }
+  }
+})
+
+server.route({
+  method: 'POST',
+  path: '/api/v1/haste/plays',
+  handler: handlers.Plays.create,
+  options: {
+    description: 'Choose a leaderboard and play a game',
+    tags: ['api', 'plays'],
+    validate: {
+      payload: Joi.object({
+        leaderboard_id: Joi.string().required(),
+        handcash_token: Joi.string().required()
+      })
+    },
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        status: Joi.string().valid('OK', 'ERROR').required(),
+        error: Joi.string().optional()
+      }).label('PlayCreated')
+    }
+  }
+})
+
+server.route({
+  method: 'POST',
+  path: '/api/v1/haste/scores',
+  handler: handlers.Scores.create,
+  options: {
+    description: 'End the game and submit your solution',
+    tags: ['api', 'plays'],
+    validate: {
+      payload: Joi.object({
+        leaderboard_id: Joi.string().required(),
+        handcash_token: Joi.string().required(),
+        play: Joi.object().required(),
+        score: Joi.number().required()
+      })
+    },
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        status: Joi.string().valid('OK', 'ERROR').required(),
+        error: Joi.string().optional()
+      }).label('PlayCreated')
+    }
+  }
+})
+
+
 
 var started = false
 

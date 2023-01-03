@@ -24,6 +24,8 @@
       "@hapi/inert": "^6.0.5",
       "@hapi/joi": "^17.1.1",
       "@hapi/vision": "^6.1.0",
+      "@hastearcade/server": "^3.0.0",
+      "@hastearcade/web": "^4.0.1",
       "commander": "^9.3.0",
       "dotenv": "^10.0.0",
       "hapi-swagger": "^14.3.0",
@@ -34,6 +36,7 @@
       "prom-client": "^14.0.1",
       "prompt-async": "^0.9.9",
       "rabbi": "^1.19.4",
+      "sequelize": "^6.28.0",
       "winston": "^3.3.3",
       "ws": "^8.2.0"
    },
