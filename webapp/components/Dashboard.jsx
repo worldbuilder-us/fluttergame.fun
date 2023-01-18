@@ -200,7 +200,7 @@ function MemeDropzone() {
     <section className='container'>
     <div {...getRootProps({ style })}>
       <input {...getInputProps()} />
-      <p>Drag & Drop a DANK MEME HERE or click to select an image</p>
+      <img src={'/images/the-peafowl-excellence-podcast-high-resolution-color-logo.svg'} style={{width: '100%'}} />
     </div>
        <aside style={thumbsContainer}>
          {thumbs}
