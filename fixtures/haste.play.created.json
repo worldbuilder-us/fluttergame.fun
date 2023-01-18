@@ -1,0 +1,26 @@
+{
+  "cost": 0,
+  "costInUsdc": 0,
+  "createdAt": "2023-01-18T19:30:06.442Z",
+  "deleted": false,
+  "deletedAt": null,
+  "developerId": "cc13bbec-90b8-4fcc-a89b-62be79b85aaa",
+  "gameArcadeId": "88460233-874b-4522-9f9b-d27a1253668d",
+  "gameId": "29a6dccd-a516-4eb3-bfe9-22517e6e5b13",
+  "id": "ae044045-bb24-4684-be6d-ef174bd157b6",
+  "ilpRegistrationId": "3fcbe3fb-9b31-44c7-893d-62d6990824b7",
+  "leaderboard": {
+    "cost": 0,
+    "currency": "USD",
+    "formattedCostString": "Practice - Free",
+    "formattedName": "Practice - Free",
+    "id": "f4ac2dc1-4131-4353-a77f-68b30dc044bd",
+    "name": "Practice"
+  },
+  "leaderboardId": "f4ac2dc1-4131-4353-a77f-68b30dc044bd",
+  "level": "info",
+  "message": "haste.play.created",
+  "playerId": "cc13bbec-90b8-4fcc-a89b-62be79b85aaa",
+  "service": "",
+  "updatedAt": "2023-01-18T19:30:06.442Z"
+}

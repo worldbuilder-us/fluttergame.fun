@@ -3731,6 +3731,13 @@
     "object.getownpropertydescriptors" "^2.0.3"
     "semver" "^5.7.0"
 
+"node-fetch@^2.6.6":
+  "integrity" "sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg=="
+  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.8.tgz"
+  "version" "2.6.8"
+  dependencies:
+    "whatwg-url" "^5.0.0"
+
 "node-releases@^2.0.3":
   "integrity" "sha512-U9h1NLROZTq9uE1SNffn6WuPDg8icmi3ns4rEl/oTfIle4iLjTliCzgTsbaIFMq/Xn078/lfY/BL0GWZ+psK4Q=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.5.tgz"
@@ -4139,11 +4146,12 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"rabbi@^1.19.4":
-  "integrity" "sha512-6Jzjc9Czrk0KVJ45qzi97OG3riTxgEnN3FFdS3/4i73eC5WkyALgkpPJ3BWYPtEx28hT3J5thKyx6Yp6QfgDpA=="
-  "resolved" "https://registry.npmjs.org/rabbi/-/rabbi-1.19.4.tgz"
-  "version" "1.19.4"
+"rabbi@^1.21.0":
+  "integrity" "sha512-LtQE3TdIAHpUx9K+4yy3GwRbNsawh8GTUobBOa5QuKnLBn4/XqOkNzm41z07s74O9A1+AxicAtfdZF6pYFxYHg=="
+  "resolved" "https://registry.npmjs.org/rabbi/-/rabbi-1.21.0.tgz"
+  "version" "1.21.0"
   dependencies:
+    "@hapi/joi" "^17.1.1"
     "@types/amqplib" "^0.8.2"
     "@types/bluebird" "^3.5.26"
     "@types/mocha" "^5.2.7"
@@ -4169,10 +4177,13 @@
     "mkdirp" "^0.5.1"
     "mocha" "^6.2.0"
     "moment" "^2.24.0"
+    "node-fetch" "^2.6.6"
     "pg" "^8.7.1"
     "public-ip" "^4.0.0"
     "require-all" "^3.0.0"
+    "split2" "^4.1.0"
     "superagent" "^5.0.5"
+    "through2" "^4.0.2"
     "wait-port" "^0.2.2"
     "winston" "^3.2.1"
 
@@ -4217,6 +4228,15 @@
     "inherits" "~2.0.1"
     "isarray" "0.0.1"
     "string_decoder" "~0.10.x"
+
+"readable-stream@3":
+  "integrity" "sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA=="
+  "resolved" "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz"
+  "version" "3.6.0"
+  dependencies:
+    "inherits" "^2.0.3"
+    "string_decoder" "^1.1.1"
+    "util-deprecate" "^1.0.1"
 
 "readdirp@~3.6.0":
   "integrity" "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="
@@ -4869,6 +4889,13 @@
   "resolved" "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
   "version" "2.3.8"
 
+"through2@^4.0.2":
+  "integrity" "sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw=="
+  "resolved" "https://registry.npmjs.org/through2/-/through2-4.0.2.tgz"
+  "version" "4.0.2"
+  dependencies:
+    "readable-stream" "3"
+
 "tildify@2.0.0":
   "integrity" "sha512-Cc+OraorugtXNfs50hU9KS369rFXCfgGLpfCfvlc+Ud5u6VWmUQsOAa9HbTvheQdYnrdJqqv1e5oIqXppMYnSw=="
   "resolved" "https://registry.npmjs.org/tildify/-/tildify-2.0.0.tgz"
@@ -4909,6 +4936,11 @@
   "integrity" "sha512-OsLcGGbYF3rMjPUf8oKktyvCiUxSbqMMS39m33MAjLTC1DVIH6x3WSt63/M77ihI09+Sdfk1AXvfhCEeUmC7mg=="
   "resolved" "https://registry.npmjs.org/toposort-class/-/toposort-class-1.0.1.tgz"
   "version" "1.0.1"
+
+"tr46@~0.0.3":
+  "integrity" "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw=="
+  "resolved" "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
+  "version" "0.0.3"
 
 "tree-kill@^1.2.2":
   "integrity" "sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A=="
@@ -5145,6 +5177,19 @@
     "chalk" "^2.4.2"
     "commander" "^3.0.2"
     "debug" "^4.1.1"
+
+"webidl-conversions@^3.0.0":
+  "integrity" "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="
+  "resolved" "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
+  "version" "3.0.1"
+
+"whatwg-url@^5.0.0":
+  "integrity" "sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw=="
+  "resolved" "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "tr46" "~0.0.3"
+    "webidl-conversions" "^3.0.0"
 
 "which-boxed-primitive@^1.0.2":
   "integrity" "sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg=="

@@ -200,7 +200,7 @@ function MemeDropzone() {
     <section className='container'>
     <div {...getRootProps({ style })}>
       <input {...getInputProps()} />
-      <p>Drag & Drop a DANK MEME HERE or click to select an image</p>
+      <p>Flutter Runner Game Goes Here</p>
     </div>
        <aside style={thumbsContainer}>
          {thumbs}

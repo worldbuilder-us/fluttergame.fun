@@ -114,6 +114,28 @@ server.route({
 })
 
 server.route({
+  method: 'GET',
+  path: '/api/v1/plays/{play_id}',
+  handler: handlers.Plays.show,
+  options: {
+    description: 'Get info about your play',
+    tags: ['api', 'plays'],
+    validate: {
+      params: Joi.object({
+        play_id: Joi.string().required()
+      })
+    },
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        status: Joi.string().valid('OK', 'ERROR').required(),
+        error: Joi.string().optional()
+      }).label('PlayCreated')
+    }
+  }
+})
+
+server.route({
   method: 'POST',
   path: '/api/v1/haste/scores',
   handler: handlers.Scores.create,

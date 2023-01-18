@@ -82,7 +82,7 @@ export default function Features() {
           <div className="bg-gray-100 dark:bg-gray-600 lg:rounded-lg mt-7 py-8 px-7 w-full flex flex-col lg:flex-row justify-between">
             <div>
               <p className="mt-4 text-2xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
-                PowMemes Features
+                Flutter Features
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-base mt-2 text-center lg:text-left">
                 You buy it, we will build it. Contribute to our next big feature

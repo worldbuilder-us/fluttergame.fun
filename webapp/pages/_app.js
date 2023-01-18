@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Pow Memes | Dankest Memes Ranked by Proof of Work</title>
+        <title>Flutter | Game | Fun</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -36,6 +36,8 @@ function MyApp({ Component, pageProps }) {
         src="https://one.relayx.io/relayone.js"
         strategy="beforeInteractive"
       />
+      <Script src="https://unpkg.com/@hastearcade/web/dist/umd/index.js" strategy="beforeInteractive"
+ />
       <ThemeProvider
         attribute="class"
         enableSystem={false}
