@@ -3,6 +3,8 @@ import Dashboard from "../../components/Dashboard";
 import { useAPI } from "../../hooks/useAPI";
 import { useTuning } from "../../context/TuningContext";
 
+import Haste from '@hastearcade/web'
+
 const Questions = () => {
   const { startTimestamp } = useTuning();
   let {
@@ -20,6 +22,9 @@ const Questions = () => {
   recent_memes = recent_memes?.filter(
     (q) => !boosted_tx?.includes(q.tx_id)
   );
+
+  //@ts-ignore
+  window.Haste = Haste
 
   return (
     <Dashboard

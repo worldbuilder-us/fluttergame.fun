@@ -5,18 +5,18 @@ const axios = require('axios')
 
 export async function main() {
 
-    const { data: { leaderboards }} = await axios.get(`http://localhost:5200/api/v1/haste/leaderboards`)
+    const { data: { leaderboards }} = await axios.get(`https://fluttergame.fun/api/v1/haste/leaderboards`)
 
     console.log({leaderboards})
 
     const params = {
         handcash_token: process.env.handcash_token,
-        leaderboard_id: leaderboards[0].id
+        leaderboard_id: leaderboards[1].id
     }
 
     console.log('PARAMS', params)
 
-    const { data } = await axios.post(`http://localhost:5200/api/v1/haste/plays`, params)
+    const { data } = await axios.post(`https://fluttergame.fun/api/v1/haste/plays`, params)
 
     console.log({data})
 
@@ -29,7 +29,7 @@ export async function main() {
 
     console.log('SCORE PARAMS', scoreParams)
 
-    const { data: scoresResult } = await axios.post(`http://localhost:5200/api/v1/haste/scores`, scoreParams)
+    const { data: scoresResult } = await axios.post(`https://fluttergame.fun/api/v1/haste/scores`, scoreParams)
 
     console.log({scoresResult})
 

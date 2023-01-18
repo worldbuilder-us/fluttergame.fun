@@ -20,7 +20,7 @@ const TuningProviderPopUp = ({ onClose }) => {
                 <div className="flex-col max-w-sm w-[310px] p-5 rounded-lg bg-gray-100 dark:bg-gray-800">
                   <div className='py-3 '>
                     <p className="text-xl text-center font-bold text-gray-800 dark:text-gray-200">
-                      Tuning Panel
+                      Leaderboard
                     </p>
                     <p className="text-center italic text-gray-700 dark:text-gray-300 text-sm mt-1 mb-4">
                     🌊 setting up the vibes 🌊 

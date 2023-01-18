@@ -41,7 +41,7 @@ export default function Settings() {
         <div className="mt-7  p-4  ">
           <div className="bg-gray-100 dark:bg-gray-600 p-5 flex flex-col cursor-pointer my-4 rounded-lg">
             <p className="text-base font-semibold mb-2 text-gray-700 dark:text-white">
-              Tuning Panel
+              Leaderboard
             </p>
             <TuningPanel />
           </div>
