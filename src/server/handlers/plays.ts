@@ -39,7 +39,8 @@ export async function create(req, h) {
             guid: play.id,
             gameId: play.gameId,
             leaderboardId: play.leaderboard.id,
-            playerId: play.playerId
+            playerId: play.playerId,
+            data: play
         })        
 
         return { play, record: record.toJSON() }

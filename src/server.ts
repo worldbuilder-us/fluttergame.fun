@@ -91,6 +91,29 @@ server.route({
 })
 
 server.route({
+  method: 'GET',
+  path: '/api/v1/haste/leaderboards/{leaderboardId}',
+  handler: handlers.Leaderboards.show,
+  options: {
+    description: 'Show a Haste Leaderboard for a game',
+    tags: ['api', 'leaderboards'],
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        leaderboards: Joi.array().items(Joi.object({
+          id: Joi.string().required(),
+          name: Joi.string().required(),
+          cost: Joi.number().required(),
+          currency: Joi.string().required(),
+          formattedName: Joi.string().required(),
+          formattedCostString: Joi.string().required()
+        })).required()
+      }).label('Leaderboards')
+    }
+  }
+})
+
+server.route({
   method: 'POST',
   path: '/api/v1/haste/plays',
   handler: handlers.Plays.create,
@@ -144,7 +167,7 @@ server.route({
     tags: ['api', 'plays'],
     validate: {
       payload: Joi.object({
-        leaderboard_id: Joi.string().required(),
+        leaderboard_id: Joi.string().optional(),
         handcash_token: Joi.string().required(),
         play: Joi.object().required(),
         score: Joi.number().required()
